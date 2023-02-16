@@ -17,3 +17,5 @@ function solution(absolutes, signs) {
   });
   return answer;
 }
+
+//reduce 메서드 공부 후 다시보기
