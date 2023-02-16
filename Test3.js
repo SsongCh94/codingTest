@@ -25,5 +25,5 @@ function solution(s) {
   return s.length % 2 === 1 ? s[middle] : s[middle - 1] + s[middle];
 }
 
-// 다른 답 참고 후 재작성! 이해하며 완료
+// 다른 답 참고 후 재작성! 이해하며 완료 
 
