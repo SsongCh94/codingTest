@@ -12,3 +12,9 @@ function solution(arr1, arr2) {
 }
 
 // 고통스럽다... map 이나 reduce 사용해서 푸는 방법도 알고싶다..
+
+function solution(arr1, arr2) {
+  return arr1.map((cur1, idx1) =>
+    cur1.map((val, idx2) => val + arr2[idx1][idx2])
+  );
+}
