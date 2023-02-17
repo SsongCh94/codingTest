@@ -17,30 +17,6 @@ function solution(s) {
 
 //
 
-function solution(s) {
-  let num = Number(s);
-  let spl = s.split("");
-  var result = [];
-  var answer = 0;
-
-  if (num.length == 4 || 6) {
-    result = spl.reduce((acc, cur, idx) => {
-      Number.isInteger(Number(cur)) ? acc.push(true) : acc.push(false);
-      return acc;
-      console.log(acc);
-    }, []);
-    console.log(result);
-    if (result.includes(false)) {
-      answer = false;
-    } else {
-      answer = true;
-    }
-  } else {
-    answer = false;
-  }
-
-  return answer;
-}
 
 function solution(s) {
   var answer = true;
