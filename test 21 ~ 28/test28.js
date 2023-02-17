@@ -8,7 +8,7 @@ function solution(x) {
     total += +arr[i];
   }
 
-  if (x % +total == 0) {
+  if (x % total == 0) {
     return true;
   } else {
     return false;
