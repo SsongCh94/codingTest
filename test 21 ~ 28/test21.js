@@ -2,10 +2,9 @@
 
 
 function solution(s) {
-    arr = s.split(' ')
+    arr = s.split(' ')   // 공백기준으로 나눠서 배열화..
     var result = [];
     
-    console.log(arr)
     for (let i = 0; i < arr.length; i++){
         arr[i] += ' ';  //이거 **
         for (let j = 0; j < arr[i].length; j++){
