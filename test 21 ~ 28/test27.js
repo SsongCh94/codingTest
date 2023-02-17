@@ -1,22 +1,19 @@
 //콜라츠 추측
 
 function solution(num) {
-  if (num === 1) {      // 넘버 1이면 0 리턴
-    return 0;
-  }
-  var answer = 0;
-  var number = num;
+  if (num === 1) return 0;  // 넘버 1이면 0 리턴
+    
   var count = 0;
 
   for (let i = 0; i < 500; i++) {
-    if (number % 2 === 0) {     //짝수일 때
-      number = number / 2;      //짝수/2
+    if (num % 2 === 0) {     //짝수일 때
+      num = num / 2;      //짝수/2
       count++;                  //카운트 추가
-      if (number === 1) {       //넘버 1 되면,
+      if (num === 1) {       //넘버 1 되면,
         return count;           //카운트 리턴.
       }
     } else {                    //홀수일 때
-       number = number * 3 + 1; //홀수*3 + 1
+       num = num * 3 + 1; //홀수*3 + 1
       count++;                  //카운트 추가
     }
   }
