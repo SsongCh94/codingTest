@@ -1,5 +1,12 @@
 // 내적
 
+// reduce 사용 추가
+function solution(a, b) {
+  return a.reduce((acc, cur, idx) => acc += cur*b[idx], 0);
+}
+
+// 첫번째나온..
+
 function solution(a, b) {
   var answer = a.reduce((acc, cur, idx) => {
     acc += cur * b[idx];
@@ -18,3 +25,5 @@ function solution(a, b) {
   console.log(answer);
   return answer;
 }
+
+
