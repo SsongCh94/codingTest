@@ -20,3 +20,10 @@ function solution(arr, divisor) {
 }
 
 // sort() 함수에 대해 알아보자.
+
+function solution(arr, divisor) {
+    var answer = arr.filter(x => x % divisor == 0)
+    return answer.length ? answer.sort((a, b) => a-b) : [-1];
+}
+
+// filter 메서드로 압축
