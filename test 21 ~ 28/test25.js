@@ -19,3 +19,6 @@ function solution(n) {
   } else answer = -1;
   return answer;
 }
+
+// 한줄코드
+solution = (n) => Number.isInteger(Math.sqrt(n)) ? Math.pow(Math.sqrt(n)+1, 2) : -1;
