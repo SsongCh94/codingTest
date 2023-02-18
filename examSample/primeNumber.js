@@ -80,7 +80,6 @@ function solution(s) {
 function primeCheck(n) {
   let checkBox = [];
     for (let j = 2; j <= Math.sqrt(n); j++) {
-      console.log(typeof n)
       n % j ? checkBox.push("prime") : checkBox.push("nonPrime")
     }
   return checkBox.includes("nonPrime") ? false : true ;
