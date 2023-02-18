@@ -59,3 +59,31 @@ function solution(s) {
 let s = "2 3 4 5";
 
 console.log(solution(s));
+
+
+// 풀이 압축.. 가독성 신경 x
+
+function solution(s) {
+  let arr = s.split(" ");
+  let max = Math.min(...arr);
+  let min = Math.max(...arr);
+
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = Number(arr[i]);
+    primeCheck(arr[i]) ?
+      (arr[i] >= max ? max = arr[i] : max = max) :
+      (arr[i] <= min ? min = arr[i] : min = min);
+  }
+  return min + ',' + max;
+}
+
+function primeCheck(n) {
+  let checkBox = [];
+    for (let j = 2; j <= Math.sqrt(n); j++) {
+      console.log(typeof n)
+      n % j ? checkBox.push("prime") : checkBox.push("nonPrime")
+    }
+  return checkBox.includes("nonPrime") ? false : true ;
+}
+
+console.log(solution(s));
