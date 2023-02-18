@@ -1,49 +1,61 @@
+// ## 3번. 소수의 개수와 덧셈 (상)
+
+// ### **문제 설명**
+
+// 문자열 s에는 공백으로 구분된 숫자들이 저장되어 있습니다. str에 나타나는 숫자 중 소수의 최대값과 소수가 아닌 수의 최소값을 찾아 이를 "(최소값) (최대값)"형태의 문자열을 반환하는 함수, solution을 완성하세요.
+
+// 예를들어 s가 "2 3 4 5"라면 "4 5"를 리턴하고, "15 3 10 9 7 8"라면 "8 7"을 리턴하면 됩니다.
+
+// ---
+
+// ### 제한사항
+
+// - s에는 둘 이상의 정수가 공백으로 구분되어 있습니다.
+// - 문자열에는 소수가 한개 이상 섞여 있습니다.
+// - 문자열에는 소수가 아닌 수가 한개 이상 섞여 있습니다.
+// - 음수는 없습니다.
+
 function solution(s) {
-    let arr = s.split(' ');
-    console.log(arr);
-    let max = Math.min(...arr)
-    let min = Math.max(...arr)
+  let arr = s.split(" ");
+  console.log(arr);
+  let max = Math.min(...arr);
+  let min = Math.max(...arr);
 
-    for (let i = 0; i < arr.length; i++) {
-      arr[i] = Number(arr[i]);
-      if (a(arr[i]) == 'x') {
-        if (arr[i] <= min) min = arr[i];
-      } else {
-        if (arr[i] >= max) max = arr[i];
-      }
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = Number(arr[i]);
+    if (a(arr[i]) == "x") {
+      if (arr[i] <= min) min = arr[i];
+    } else {
+      if (arr[i] >= max) max = arr[i];
     }
-
-    function a(n) {
-      let answer = [];
-
-      for (let j = 2; j <= n / 2; j++) {
-        if (n !== 2) {
-          if (n % j == 0) {
-            answer.push('x');
-          } else {
-            answer.push('y');
-          }
-        } 
-        else {
-          answer.push('y')
-        }
-      }
-
-
-      if (answer.includes('x')) {
-        return 'x';
-      }
-      else {
-        return 'y';
-      }
-
-    }
-
-    console.log(min)
-    console.log(max)
-    return;
   }
 
-  let s = "2 3 4 5";
+  function a(n) {
+    let answer = [];
 
-  console.log(solution(s))
+    for (let j = 2; j <= n / 2; j++) {
+      if (n !== 2) {
+        if (n % j == 0) {
+          answer.push("x");
+        } else {
+          answer.push("y");
+        }
+      } else {
+        answer.push("y");
+      }
+    }
+    if (answer.includes("x")) {
+      return "x";
+    } else {
+      return "y";
+    }
+  }
+
+  console.log(min);
+  console.log(max);
+  return;
+}
+
+let s = "2 3 4 5";
+
+console.log(solution(s));
