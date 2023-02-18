@@ -10,8 +10,5 @@ function solution(month, day) {
   return result;
 }
 
-console.log(solution(1, 18));
-// 4월 26일
-
 // 문제 링크
 // https://teamsparta.notion.site/99-13-f6dc48e0230d4195828682c97da235dc
